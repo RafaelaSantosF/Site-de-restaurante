@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÉGUARIA - Gastronomia Amazônica</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <header>
+        <div class="logo">ÉGUARIA</div> 
+        <nav>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#sobre">Nossa História</a>
+            <a href="#contato">Contato</a>
+            <a href="cadastro.html" class="cta-nav">Login/Cadastro</a>
+            <a href="checkout.html" class="cta-nav carrinho-link">
+                Pedido (<span id="item-count">0</span>)
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="destaque">
+            <h1>O Verdadeiro Sabor da Sua Amazônia, na Sua Mesa</h1>
+            <p>Ingredientes frescos e autênticos em pratos que contam a história do Pará com elegância.</p>
+            <a href="#cardapio" class="cta-principal">VER CARDÁPIO COMPLETO</a>
+        </section>
+
+        <section id="cardapio" class="menu-lista">
+            <h2>Pratos em Destaque</h2>
+            
+            <div class="item" data-name="Filhote na Brasa" data-price="55.00">
+                <img src="foto-do-prato-1.jpg" alt="Filhote na Brasa">
+                <div class="detalhes">
+                    <h3>Filhote na Brasa</h3>
+                    <p class="descricao">Acompanhado de tucupi reduzido e farofa d'água crocante.</p>
+                    <span class="preco">R$ 55,00</span>
+                    <button class="cta-item js-add-to-cart">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="item" data-name="Maniçoba Elegante" data-price="48.00">
+                <img src="foto-do-prato-2.jpg" alt="Maniçoba">
+                <div class="detalhes">
+                    <h3>Maniçoba Elegante</h3>
+                    <p class="descricao">Cozida lentamente, servida com arroz branco e pimenta de cheiro.</p>
+                    <span class="preco">R$ 48,00</span>
+                    <button class="cta-item js-add-to-cart">Adicionar</button>
+                </div>
+            </div>
+            
+        </section>
+
+        <section id="sobre" class="info-extra">
+            <h2>Nossa História</h2>
+            <p>A Éguaria nasceu da paixão em transformar ingredientes regionais do Pará em experiências gastronômicas elevadas. Cada prato é uma homenagem à cultura e ao sabor inigualável da Amazônia.</p>
+        </section>
+
+        <section id="contato" class="contato">
+            <h2>Fale Conosco</h2>
+            <div class="contato-container">
+                <div class="contato-info">
+                    <h3>Atendimento Éguaria</h3>
+                    <p class="detalhe-contato"><strong>WhatsApp:</strong> (91) 99999-9999</p>
+                    <p class="detalhe-contato"><strong>Email:</strong> contato@eguaria.com.br</p>
+                </div>
+                <form class="contato-form">
+                    <input type="text" placeholder="Seu Nome" required>
+                    <input type="email" placeholder="Seu Email" required>
+                    <textarea placeholder="Sua Mensagem ou Pedido" rows="5" required></textarea>
+                    <button type="submit" class="cta-principal">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>© 2025 ÉGUARIA. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

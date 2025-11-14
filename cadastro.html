@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Cadastro - ÉGUARIA</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <header>
+        <div class="logo">ÉGUARIA</div> 
+        <nav>
+            <a href="login.html">Voltar ao Cardápio</a>
+        </nav>
+    </header>
+
+    <main class="login-main">
+        <div class="login-container">
+            <h1>Acesso do Cliente</h1>
+            
+            <div class="tabs">
+                <button class="tab-button active" onclick="showForm('login')">Login</button>
+                <button class="tab-button" onclick="showForm('cadastro')">Cadastre-se</button>
+            </div>
+
+            <form id="login-form" class="auth-form">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Senha" required>
+                <button type="submit" class="cta-principal">Entrar</button>
+            </form>
+
+            <form id="cadastro-form" class="auth-form hidden">
+                <input type="text" placeholder="Nome Completo" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Crie uma Senha" required>
+                <button type="submit" class="cta-principal">Criar Conta</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 ÉGUARIA. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function showForm(formId) {
+            const loginForm = document.getElementById('login-form');
+            const cadastroForm = document.getElementById('cadastro-form');
+            const loginButton = document.querySelector('.tab-button:nth-child(1)');
+            const cadastroButton = document.querySelector('.tab-button:nth-child(2)');
+
+            if (formId === 'login') {
+                loginForm.classList.remove('hidden');
+                cadastroForm.classList.add('hidden');
+                loginButton.classList.add('active');
+                cadastroButton.classList.remove('active');
+            } else {
+                loginForm.classList.add('hidden');
+                cadastroForm.classList.remove('hidden');
+                loginButton.classList.remove('active');
+                cadastroButton.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
