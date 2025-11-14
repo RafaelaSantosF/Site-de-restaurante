@@ -1,73 +1,370 @@
-/* Paleta de Cores Final */
+/* ------------------------------ */
+/* PALETA DE CORES                */
+/* ------------------------------ */
 :root {
-    --cor-fundo-suave: #F4F0E4; /* Bege Claro/Creme */
-    --cor-primaria: #0A3C2F; /* Verde Floresta Escuro */
-    --cor-destaque: #7A2A70; /* Roxo Açaí */
-    --cor-destaque-hover: #5A1950; /* Roxo Açaí Escuro */
-    --cor-neutra: #FFFFFF; /* Branco */
-    --cor-texto: #333333; /* Cinza Escuro */
+    --cor-fundo-suave: #F4F0E4;      
+    --cor-primaria: #0A3C2F;         
+    --cor-destaque: #7A2A70;         
+    --cor-destaque-hover: #5A1950;   
+    --cor-neutra: #FFFFFF;           
+    --cor-texto: #333333;            
 }
 
-/* BASE e Estrutura */
-body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background-color: var(--cor-fundo-suave); color: var(--cor-texto); }
-h1, h2, h3 { color: var(--cor-primaria); font-weight: 600; }
+/* ------------------------------ */
+/* BASE                           */
+/* ------------------------------ */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-fundo-suave);
+    color: var(--cor-texto);
+}
 
-/* CABEÇALHO e NAV */
-header { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background-color: var(--cor-neutra); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); }
-.logo { font-size: 1.8em; font-weight: bold; color: var(--cor-destaque); }
-nav a { text-decoration: none; color: var(--cor-texto); margin-left: 25px; font-size: 1.1em; transition: color 0.3s; }
-nav a:hover { color: var(--cor-destaque); }
-.cta-nav { color: var(--cor-destaque) !important; border: 2px solid var(--cor-destaque); padding: 8px 15px; border-radius: 4px; font-weight: bold; }
-.cta-nav:hover { background-color: var(--cor-destaque); color: var(--cor-neutra) !important; }
+h1, h2, h3 {
+    color: var(--cor-primaria);
+    font-weight: 600;
+}
 
-/* DESTAQUE PRINCIPAL */
-.destaque { background-color: #E8E5D7; text-align: center; padding: 120px 5%; margin-bottom: 50px; }
-.destaque h1 { font-size: 3.5em; margin-bottom: 25px; line-height: 1.1; }
+/* ------------------------------ */
+/* HEADER E NAVEGAÇÃO             */
+/* ------------------------------ */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: var(--cor-neutra);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 
-/* CTAs */
-.cta-principal { display: inline-block; background-color: var(--cor-destaque); color: var(--cor-neutra); padding: 18px 40px; text-decoration: none; font-weight: bold; font-size: 1.2em; border-radius: 8px; transition: background-color 0.3s; }
-.cta-principal:hover { background-color: var(--cor-destaque-hover); }
-.cta-item { background-color: var(--cor-destaque); color: var(--cor-neutra); padding: 10px 15px; text-decoration: none; font-weight: bold; border-radius: 5px; align-self: flex-start; border: none; cursor: pointer; transition: background-color 0.3s; }
-.cta-item:hover { background-color: var(--cor-destaque-hover); }
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--cor-destaque);
+}
 
-/* LISTA DO CARDÁPIO */
-.menu-lista { padding: 20px 5%; max-width: 1200px; margin: 0 auto 70px auto; }
-.menu-lista h2 { text-align: center; margin-bottom: 50px; font-size: 3em; }
-.item { display: flex; align-items: center; gap: 30px; background-color: var(--cor-neutra); padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); margin-bottom: 30px; transition: transform 0.3s; }
-.item:hover { transform: translateY(-5px); box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); }
-.item img { width: 200px; height: 130px; object-fit: cover; border-radius: 5px; }
-.detalhes { flex-grow: 1; display: flex; flex-direction: column; }
-.detalhes h3 { margin-top: 0; color: var(--cor-destaque); font-size: 1.5em; }
-.preco { font-weight: bold; font-size: 1.4em; color: var(--cor-primaria); margin-bottom: 15px; }
+nav a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    margin-left: 25px;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
 
-/* SEÇÕES INFORMATIVAS (HISTÓRIA, CONTATO) */
-.info-extra { text-align: center; padding: 60px 5%; background-color: var(--cor-neutra); margin-bottom: 50px; }
-.contato { padding: 60px 5%; max-width: 1200px; margin: 0 auto 50px auto; text-align: center; }
-.contato-container { display: flex; justify-content: space-around; gap: 40px; text-align: left; }
-.contato-info, .contato-form { flex: 1; padding: 30px; background-color: var(--cor-neutra); border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); }
-.contato-form input, .contato-form textarea { width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 1em; box-sizing: border-box; }
+nav a:hover {
+    color: var(--cor-destaque);
+}
 
-/* FOOTER */
-footer { text-align: center; padding: 25px; background-color: var(--cor-primaria); color: var(--cor-neutra); font-size: 0.9em; }
+.cta-nav {
+    color: var(--cor-destaque) !important;
+    border: 2px solid var(--cor-destaque);
+    padding: 8px 15px;
+    border-radius: 4px;
+}
 
-/* --- LOGIN/CADASTRO --- */
-.login-main { display: flex; justify-content: center; align-items: flex-start; padding: 80px 5% 100px; min-height: 80vh; }
-.login-container { max-width: 450px; width: 100%; background-color: var(--cor-neutra); padding: 40px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); text-align: center; }
-.login-container h1 { color: var(--cor-destaque); margin-bottom: 30px; font-size: 2em; }
-.tabs { display: flex; margin-bottom: 30px; border-bottom: 2px solid var(--cor-fundo-suave); }
-.tab-button { flex: 1; padding: 15px 10px; border: none; background-color: transparent; font-size: 1.1em; font-weight: bold; color: var(--cor-texto); cursor: pointer; transition: color 0.3s, border-bottom 0.3s; }
-.tab-button.active { color: var(--cor-destaque); border-bottom: 3px solid var(--cor-destaque); }
-.auth-form input { width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 1em; box-sizing: border-box; }
-.auth-form .cta-principal { width: 100%; margin-top: 10px; }
-.hidden { display: none; }
+.cta-nav:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-neutra) !important;
+}
 
-/* RESPONSIVIDADE */
+/* ------------------------------ */
+/* SEÇÃO DE DESTAQUE PRINCIPAL    */
+/* ------------------------------ */
+.destaque {
+    background-image: url('/Projeto-Front-end/Img/comida-brasileira-simples-com-espaco-de-copia.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px 20px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.destaque h1 {
+    font-size: 3.5em;
+    margin-bottom: 25px;
+    line-height: 1.1;
+}
+
+.corparagrafo {
+    color: #000000;
+}
+
+/* ------------------------------ */
+/* BOTÕES E CTAs                  */
+/* ------------------------------ */
+.cta-principal {
+    display: inline-block;
+    background-color: var(--cor-destaque);
+    color: var(--cor-neutra);
+    padding: 18px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.cta-principal:hover {
+    background-color: var(--cor-destaque-hover);
+}
+
+.cta-item {
+    background-color: var(--cor-destaque);
+    color: var(--cor-neutra);
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-item:hover {
+    background-color: var(--cor-destaque-hover);
+}
+
+/* ------------------------------ */
+/* CARDÁPIO / LISTA DE ITENS      */
+/* ------------------------------ */
+.menu-lista {
+    padding: 20px 5%;
+    max-width: 1200px;
+    margin: 0 auto 70px auto;
+}
+
+.menu-lista h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 3em;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--cor-neutra);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    transition: transform 0.3s;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.item img {
+    width: 200px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.detalhes {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.detalhes h3 {
+    margin-top: 0;
+    color: var(--cor-destaque-hover);
+    font-size: 1.5em;
+}
+
+.preco {
+    font-weight: bold;
+    font-size: 1.4em;
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+}
+
+/* ------------------------------ */
+/* SEÇÕES INFORMATIVAS            */
+/* ------------------------------ */
+.info-extra {
+    text-align: center;
+    padding: 60px 5%;
+    background-color: var(--cor-neutra);
+    margin-bottom: 50px;
+}
+
+.info-extra p {
+    font-size: 1.6em;
+    line-height: 1.7;
+}
+
+.info-extra h2 {
+    font-size: 3.2em;
+}
+
+/* ------------------------------ */
+/* CONTATO                        */
+/* ------------------------------ */
+.contato {
+    padding: 60px 5%;
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+    text-align: center;
+}
+
+.contato-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    text-align: left;
+}
+
+.contato-info,
+.contato-form {
+    flex: 1;
+    padding: 30px;
+    background-color: var(--cor-neutra);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contato-form input,
+.contato-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+/* ------------------------------ */
+/* FOOTER                         */
+/* ------------------------------ */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-neutra);
+    font-size: 0.9em;
+}
+
+/* ------------------------------ */
+/* LOGIN / CADASTRO               */
+/* ------------------------------ */
+.login-main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 80px 5% 100px;
+    min-height: 80vh;
+}
+
+.login-container {
+    max-width: 450px;
+    width: 100%;
+    background-color: var(--cor-neutra);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h1 {
+    color: var(--cor-destaque);
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.titulo1{
+    color: #F4F0E4;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--cor-fundo-suave);
+}
+
+.tab-button {
+    flex: 1;
+    padding: 15px 10px;
+    border: none;
+    background-color: transparent;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--cor-texto);
+    cursor: pointer;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.tab-button.active {
+    color: var(--cor-destaque);
+    border-bottom: 3px solid var(--cor-destaque);
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.auth-form .cta-principal {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ------------------------------ */
+/* RESPONSIVIDADE                 */
+/* ------------------------------ */
 @media (max-width: 900px) {
-    header { flex-direction: column; padding: 15px 5%; }
-    nav { margin-top: 10px; text-align: center; }
-    nav a { display: block; margin: 5px 0; padding: 5px 0; }
-    .item { flex-direction: column; text-align: center; gap: 15px; }
-    .item img { width: 100%; max-width: 300px; height: auto; }
-    .detalhes { align-items: center; text-align: center; }
-    .contato-container { flex-direction: column; gap: 30px; }
+
+    header {
+        flex-direction: column;
+        padding: 15px 5%;
+    }
+
+    nav {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+        padding: 5px 0;
+    }
+
+    .item {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .item img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .detalhes {
+        align-items: center;
+        text-align: center;
+    }
+
+    .contato-container {
+        flex-direction: column;
+        gap: 30px;
+    }
 }

@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ÉGUARIA - Gastronomia Amazônica</title>
+    <title>Restaurante Encantos Amazônicos</title>
     <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
     <header>
-        <div class="logo">ÉGUARIA</div> 
+        <div class="logo">Restaurante Encantos Amazônicos</div> 
         <nav>
             <a href="#cardapio">Cardápio</a>
             <a href="#sobre">Nossa História</a>
@@ -22,30 +22,60 @@
 
     <main>
         <section class="destaque">
-            <h1>O Verdadeiro Sabor da Sua Amazônia, na Sua Mesa</h1>
-            <p>Ingredientes frescos e autênticos em pratos que contam a história do Pará com elegância.</p>
+            <h1 class="titulo1">O Verdadeiro Sabor da Sua Amazônia, na Sua Mesa</h1>
+            <p class="corparagrafo">Ingredientes frescos e autênticos em pratos que contam a história do Pará com elegância.</p>
             <a href="#cardapio" class="cta-principal">VER CARDÁPIO COMPLETO</a>
         </section>
 
         <section id="cardapio" class="menu-lista">
             <h2>Pratos em Destaque</h2>
             
-            <div class="item" data-name="Filhote na Brasa" data-price="55.00">
-                <img src="foto-do-prato-1.jpg" alt="Filhote na Brasa">
+            <div class="item" data-name="Açaí com Peixe Frito" data-price="55.00">
+                <img src="/Projeto-Front-end/Img/AcaícomPeixeFrito.jpeg" alt="Açaí com Peixe Frito">
                 <div class="detalhes">
-                    <h3>Filhote na Brasa</h3>
-                    <p class="descricao">Acompanhado de tucupi reduzido e farofa d'água crocante.</p>
-                    <span class="preco">R$ 55,00</span>
+                    <h3>Açaí com Peixe Frito</h3>
+                    <p class="descricao"> Peixe frito e com açaí e farinha com tapioca.</p>
+                    <span class="preco">R$ 35,00</span>
+                    <button class="cta-item js-add-to-cart">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="item" data-name="Arroz Paraense" data-price="55.00">
+                <img src="/Projeto-Front-end/Img/ArrozParaense.jpeg" alt="Arroz Paraense">
+                <div class="detalhes">
+                    <h3>Arroz Paraense</h3>
+                    <p class="descricao"> Arroz branco soltinho, camarão e um autêntico molho paraense.</p>
+                    <span class="preco">R$ 30,00</span>
                     <button class="cta-item js-add-to-cart">Adicionar</button>
                 </div>
             </div>
 
             <div class="item" data-name="Maniçoba Elegante" data-price="48.00">
-                <img src="foto-do-prato-2.jpg" alt="Maniçoba">
+                <img src="/Projeto-Front-end/Img/Maniçoba.jpeg" alt="Maniçoba">
                 <div class="detalhes">
-                    <h3>Maniçoba Elegante</h3>
-                    <p class="descricao">Cozida lentamente, servida com arroz branco e pimenta de cheiro.</p>
-                    <span class="preco">R$ 48,00</span>
+                    <h3>Maniçoba</h3>
+                    <p class="descricao"> Maniva (folha moída da mandioca brava), charque, toucinho, pé, costela e linguiça. O prato é servido tradicionalmente acompanhado por Arroz Branco Soltinh</p>
+                    <span class="preco">R$ 35,00</span>
+                    <button class="cta-item js-add-to-cart">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="item" data-name="Pato no Tucupi" data-price="48.00">
+                <img src="/Projeto-Front-end/Img/PatonoTucupi.jpeg" alt="Pato no Tucupi">
+                <div class="detalhes">
+                    <h3>Pato no Tucupi</h3>
+                    <p class="descricao"> Arroz branco soltinho, camarão e a tradicional goma, realçados pelo autêntico tucupi paraense.</p>
+                    <span class="preco">R$ 50,00</span>
+                    <button class="cta-item js-add-to-cart">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="item" data-name="Tacaca" data-price="48.00">
+                <img src="/Projeto-Front-end/Img/Tacaca.jpeg" alt="Tacaca">
+                <div class="detalhes">
+                    <h3>Tacaca</h3>
+                    <p class="descricao"> Camarão fresco e arroz soltinho imersos no tucupi, com o toque vibrante do jambur</p>
+                    <span class="preco">R$ 25,00</span>
                     <button class="cta-item js-add-to-cart">Adicionar</button>
                 </div>
             </div>
@@ -54,16 +84,16 @@
 
         <section id="sobre" class="info-extra">
             <h2>Nossa História</h2>
-            <p>A Éguaria nasceu da paixão em transformar ingredientes regionais do Pará em experiências gastronômicas elevadas. Cada prato é uma homenagem à cultura e ao sabor inigualável da Amazônia.</p>
+            <p class="paragrafo1">O Encantos Amazonico nasceu da paixão em transformar ingredientes regionais do Pará em experiências gastronômicas elevadas. Cada prato é uma homenagem à cultura e ao sabor inigualável da Amazônia.</p>
         </section>
 
         <section id="contato" class="contato">
             <h2>Fale Conosco</h2>
             <div class="contato-container">
                 <div class="contato-info">
-                    <h3>Atendimento Éguaria</h3>
+                    <h3>Atendimento Encantos Amazonico</h3>
                     <p class="detalhe-contato"><strong>WhatsApp:</strong> (91) 99999-9999</p>
-                    <p class="detalhe-contato"><strong>Email:</strong> contato@eguaria.com.br</p>
+                    <p class="detalhe-contato"><strong>Email:</strong> Encantos123@email.com.br</p>
                 </div>
                 <form class="contato-form">
                     <input type="text" placeholder="Seu Nome" required>
@@ -77,7 +107,7 @@
     </main>
 
     <footer>
-        <p>© 2025 ÉGUARIA. Todos os direitos reservados.</p>
+        <p>© 2025 Restaurante Encantos Amazonicos. Todos os direitos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
