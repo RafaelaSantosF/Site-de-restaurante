@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pedido — Restaurante Encantos Paraenses</title>
+
+    <link rel="stylesheet" href="style_pedido.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Restaurante Encantos Paraenses</div>
+        <nav>
+            <a href="login.html">Cardápio</a>
+            <a href="#sobre">Nossa História</a>
+            <a href="#contato">Contato</a>
+            <a href="cadastro.html" class="cta-nav">Login/Cadastro</a>
+            <a href="pedido.html" class="cta-nav carrinho-link">
+                Pedido (<span id="item-count">0</span>)
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="pedido-container">
+            <div class="carrinho-header">
+                <h1>Seu Pedido</h1>
+                <div class="info-pequena">Itens no carrinho: <strong id="count-display">0</strong></div>
+            </div>
+
+            <div id="lista-pedido"></div>
+
+            <div id="empty-message" class="empty" style="display:none;">
+                Seu carrinho está vazio. Volte ao cardápio e adicione algo delicioso! 🍽️
+            </div>
+
+            <div id="resumo" class="resumo-pedido" style="display:none;">
+                <div>
+                    <div>Itens: <span id="resumo-itens">0</span></div>
+                    <div class="total">Total: R$ <span id="total">0.00</span></div>
+                </div>
+                <div>
+                    <button id="limpar" class="btn-checkout" style="margin-right:10px;">Limpar</button>
+                    <button id="checkout" class="btn-checkout">Finalizar Pedido</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Restaurante Encantos Paraenses. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- =============================== -->
+    <!--  JAVASCRIPT DO PEDIDO          -->
+    <!-- =============================== -->
+    <script>
+        function loadCart() {
+            let cart = localStorage.getItem("cart");
+            return cart ? JSON.parse(cart) : [];
+        }
+
+        function saveCart(cart) {
+            localStorage.setItem("cart", JSON.stringify(cart));
+        }
+
+        function updatePedidoPage() {
+            const lista = document.getElementById("lista-pedido");
+            const emptyMsg = document.getElementById("empty-message");
+            const resumo = document.getElementById("resumo");
+            const countDisplay = document.getElementById("count-display");
+            const headerCount = document.getElementById("item-count");
+
+            let cart = loadCart();
+
+            lista.innerHTML = "";
+
+            if (cart.length === 0) {
+                emptyMsg.style.display = "block";
+                resumo.style.display = "none";
+                countDisplay.textContent = "0";
+                headerCount.textContent = "0";
+                return;
+            }
+
+            emptyMsg.style.display = "none";
+            resumo.style.display = "flex";
+
+            let total = 0;
+            let totalItens = 0;
+
+            cart.forEach((item, index) => {
+                total += item.price * item.qty;
+                totalItens += item.qty;
+
+                const div = document.createElement("div");
+                div.classList.add("item-pedido");
+
+                div.innerHTML = `
+                    <div class="pedido-info"> <hr>
+                        <h3>${item.name}</h3>
+                        <p>R$ ${item.price.toFixed(2)}</p>
+                        <p>Quantidade: ${item.qty}</p>
+                    </div>
+                `;
+
+                lista.appendChild(div);
+            });
+
+            document.getElementById("total").textContent = total.toFixed(2);
+            document.getElementById("resumo-itens").textContent = totalItens;
+
+            countDisplay.textContent = totalItens;
+            headerCount.textContent = totalItens;
+        }
+
+        // limpar pedido
+        document.addEventListener("DOMContentLoaded", () => {
+            updatePedidoPage();
+
+            const limpar = document.getElementById("limpar");
+            limpar.addEventListener("click", () => {
+                localStorage.removeItem("cart");
+                updatePedidoPage();
+            });
+        });
+    </script>
+
+</body>
+</html>

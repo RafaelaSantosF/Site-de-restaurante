@@ -10,6 +10,8 @@
     --cor-texto: #333333;            
 }
 
+
+
 /* ------------------------------ */
 /* BASE                           */
 /* ------------------------------ */
@@ -20,6 +22,15 @@ body {
     background-color: var(--cor-fundo-suave);
     color: var(--cor-texto);
 }
+
+.menu-lista {
+    display: none;
+}
+
+.menu-lista.ativa {
+    display: block;
+}
+
 
 h1, h2, h3 {
     color: var(--cor-primaria);
@@ -72,15 +83,32 @@ nav a:hover {
 /* SEÇÃO DE DESTAQUE PRINCIPAL    */
 /* ------------------------------ */
 .destaque {
-    background-image: url('/Projeto-Front-end/Img/comida-brasileira-simples-com-espaco-de-copia.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 120px 20px;
+    position: relative;
+    height: 400px; /* 🔥 ALTURA IDEAL (pode ajustar) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+
     color: #fff;
+    padding: 20px;
     margin-bottom: 50px;
+    overflow: hidden; /* corta excesso da imagem */
 }
+
+.destaqueimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* 🔥 cobre igual background-size: cover */
+    object-position: center;
+    z-index: -1;          /* joga atrás do texto */
+    filter: brightness(0.45); /* 🔥 efeito para deixar texto visível */
+}
+
 
 .destaque h1 {
     font-size: 3.5em;
@@ -105,6 +133,26 @@ nav a:hover {
     font-size: 1.2em;
     border-radius: 8px;
     transition: background-color 0.3s;
+}
+
+.tituloescolha {
+    display: inline-block;
+    background-color: var(--cor-destaque);
+    color: var(--cor-neutra);
+    padding: 18px 40px;
+    /* margin-top: 2px; */
+    margin-left: 810px;
+    margin-bottom: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-radius: 2000px;
+    transition: background-color 0.3s;
+}
+
+.topicos{
+    padding-left: 655px;
+    
 }
 
 .cta-principal:hover {
@@ -136,11 +184,14 @@ nav a:hover {
     margin: 0 auto 70px auto;
 }
 
+
 .menu-lista h2 {
     text-align: center;
     margin-bottom: 50px;
     font-size: 3em;
 }
+
+
 
 .item {
     display: flex;

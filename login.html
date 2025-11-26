@@ -3,97 +3,326 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurante Encantos Amazônicos</title>
+    <title>Restaurante Encantos Paraenses</title>
     <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
     <header>
-        <div class="logo">Restaurante Encantos Amazônicos</div> 
+        <div class="logo">Restaurante Encantos Paraenses</div> 
         <nav>
             <a href="#cardapio">Cardápio</a>
             <a href="#sobre">Nossa História</a>
             <a href="#contato">Contato</a>
             <a href="cadastro.html" class="cta-nav">Login/Cadastro</a>
-            <a href="checkout.html" class="cta-nav carrinho-link">
+            <a href="pedido.html" class="cta-nav carrinho-link">
                 Pedido (<span id="item-count">0</span>)
             </a>
         </nav>
     </header>
 
     <main>
-        <section class="destaque">
+        <!-- <section class="destaque">
+            <img src="/Img/comida-brasileira-simples-com-espaco-de-copia.jpg" alt="">
             <h1 class="titulo1">O Verdadeiro Sabor da Sua Amazônia, na Sua Mesa</h1>
             <p class="corparagrafo">Ingredientes frescos e autênticos em pratos que contam a história do Pará com elegância.</p>
             <a href="#cardapio" class="cta-principal">VER CARDÁPIO COMPLETO</a>
+        </section> -->
+
+        <section class="destaque">
+            <img src="/Img/comida-brasileira-simples-com-espaco-de-copia.jpg" alt="" class="destaqueimg">
+
+            <h1 class="titulo1">A Essência da Culinária Paraense, Direto para a Sua Mesa!</h1>
+            <p class="corparagrafo">Ingredientes frescos e autênticos em pratos que contam a história do Pará com elegância.</p>
+            <a href="#navegacao" class="cta-principal">Acesse abaixo!</a>
         </section>
 
-        <section id="cardapio" class="menu-lista">
-            <h2>Pratos em Destaque</h2>
+        <div id="navegacao" class="tituloescolha">
+            Escolha o que voce quer
+        </div>
+        <div>
+            <div class="topicos">
+                <nav>
+                    <!-- <a href="#cardapio">Comidas Típicas</a>
+                    <a href="#sobre">Bebidas</a>
+                    <a href="#contato">Contato</a> -->
+                    <a href="#cardapio" class="cta-nav">Pratos Principais</a>
+                    <a href="#bebida" class="cta-nav">Bebidas</a>
+                    <a href="#sobremesas" class="cta-nav">Sobremesas</a>
+                    <a href="#pizza" class="cta-nav">Pizzas</a>
+                </nav>
+            </div>
+
+            <section id="cardapio" class="menu-lista">
+                <h2>Pratos Principais</h2>
+
+
+                <div class="item" data-name="Açaí com Peixe Frito" data-price="55.00">
+                    <img src="/Img/AcaícomPeixeFrito.jpeg" alt="Açaí com Peixe Frito">
+                    <div class="detalhes">
+                        <h3>Açaí com Peixe Frito</h3>
+                        <p class="descricao"> Peixe frito e com açaí e farinha com tapioca.</p>
+                        <span class="preco">R$ 35,00</span>
+                        <button class="cta-item js-add-to-cart">Adicionar</button>
+                    </div>
+                </div>
+
+                <div class="item" data-name="Arroz Paraense" data-price="55.00">
+                    <img src="/Img/ArrozParaense.jpeg" alt="Arroz Paraense">
+                    <div class="detalhes">
+                        <h3>Arroz Paraense</h3>
+                        <p class="descricao"> Arroz branco soltinho, camarão e um autêntico molho paraense.</p>
+                        <span class="preco">R$ 30,00</span>
+                        <button class="cta-item js-add-to-cart">Adicionar</button>
+                    </div>
+                </div>
+
+                <div class="item" data-name="Maniçoba Elegante" data-price="48.00">
+                    <img src="/Img/Maniçoba.jpeg" alt="Maniçoba">
+                    <div class="detalhes">
+                        <h3>Maniçoba</h3>
+                        <p class="descricao"> Maniva (folha moída da mandioca brava), charque, toucinho, pé, costela e linguiça. O prato é servido tradicionalmente acompanhado por Arroz Branco soltinho</p>
+                        <span class="preco">R$ 45,00</span>
+                        <button class="cta-item js-add-to-cart">Adicionar</button>
+                    </div>
+                </div>
+
+                <div class="item" data-name="Pato no Tucupi" data-price="48.00">
+                    <img src="/Img/PatonoTucupi.jpeg" alt="Pato no Tucupi">
+                    <div class="detalhes">
+                        <h3>Pato no Tucupi</h3>
+                        <p class="descricao"> Arroz branco soltinho, camarão e a tradicional goma, realçados pelo autêntico tucupi paraense.</p>
+                        <span class="preco">R$ 50,00</span>
+                        <button class="cta-item js-add-to-cart">Adicionar</button>
+                    </div>
+                </div>
+
+                <div class="item" data-name="Tacaca" data-price="48.00">
+                    <img src="/Img/Tacaca.jpeg" alt="Tacaca">
+                    <div class="detalhes">
+                        <h3>Tacacá</h3>
+                        <p class="descricao"> O tacacá é um caldo de origem indígena, típico da região amazônica, servido bem quente em cuias e feito com tucupi (líquido extraído da mandioca), goma de tapioca, camarão seco e jambu,</p>
+                        <span class="preco">R$ 25,00</span>
+                        <button class="cta-item js-add-to-cart">Adicionar</button>
+                    </div>
+                </div>
+                <div class="item" data-name="caldeirada de peixe" data-price="48.00">
+                   <img src="/Img/caldeirada-de-peixe.jpg" alt="Caldeira de peixe">
+                   <div class="detalhes">
+                       <h3>Caldeirada de peixe</h3>
+                       <p class="descricao"> Camarão fresco e arroz soltinho imersos no tucupi, com o toque vibrante do jambu</p>
+                       <span class="preco">R$ 25,00</span>
+                       <button class="cta-item js-add-to-cart">Adicionar</button>
+                   </div>
+                </div>
+
+                <div class="item" data-name="" data-price="48.00">
+                   <img src="/Img/caruru-27692995.webp" alt="Caruru">
+                   <div class="detalhes">
+                       <h3>Caruru</h3>
+                       <p class="descricao"> É um cozido cremoso e de sabor intenso, tipicamente baiano, feito com quiabo picadinho, camarão seco, cebola, amendoim, castanha de caju e azeite de dendê.</p>
+                       <span class="preco">R$ 25,00</span>
+                       <button class="cta-item js-add-to-cart">Adicionar</button>
+                   </div>
+                </div>
+
+                <div class="item" data-name="Vatapá" data-price="48.00">
+                   <img src="/Img/vatapa.jpg" alt="Vata">
+                   <div class="detalhes">
+                       <h3>Vatapá</h3>
+                       <p class="descricao"> . </p>
+                       <span class="preco">R$ 27,00</span>
+                       <button class="cta-item js-add-to-cart">Adicionar</button>
+                   </div>
+                </div>
+            </section>    
+
+            <section id="bebida" class="menu-lista">
+                <h2>Bebidas</h2>
+                    <div class="item" data-name="água mineral" data-price="48.00">
+                        <img src="/Img/água mineral sem gás- 350ml.webp" alt="">
+                        <div class="detalhes">
+                            <h3>Água mineral</h3>
+                            <p class="descricao">Água Mineral Sem Gás 350ml – Fontágua</p>
+                            <span class="preco">R$ 6,00</span>
+                            <button class="cta-item js-add-to-cart">Adicionar</button>
+                        </div>
+                    </div>
+
+                    <div class="item" data-name="Ice" data-price="48.00">
+                        <img src="/Img/Ice.jpeg" alt="">
+                        <div class="detalhes">
+                            <h3>Ice</h3>
+                            <p class="descricao"> 51 Ice vem pronta para beber e é perfeita para ser consumida entre amigos ou nas baladas. Disponível nos sabores Limão, Maracujá, Kiwi, Balada, Tangerina, Fruit Mix e o lançamento Citrus. 51 Ice oferece aos consumidores a mistura perfeita do que o Brasil tem de melhor, Cachaça 51 e frutas.</p>
+                            <span class="preco">R$ 6,99</span>
+                            <button class="cta-item js-add-to-cart">Adicionar</button>
+                        </div>
+                    </div>
+
+                    <div class="item" data-name="cerveja" data-price="48.00">
+                        <img src="/Img/lata devassa.jpg" alt="">
+                        <div class="detalhes">
+                            <h3>Devassa</h3>
+                            <p class="descricao"> Cerveja Devassa puro malte sleek lata 350ML.</p>
+                            <span class="preco">R$ 4,99</span>
+                            <button class="cta-item js-add-to-cart">Adicionar</button>
+                        </div>
+                    </div>
+
+
+                    <div class="item" data-name="coca- cola" data-price="48.00">
+                        <img src="/Img/coca cola refrigerante 2 litros.webp" alt="">
+                        <div class="detalhes">
+                            <h3>Coca-cola 2 litros</h3>
+                            <p class="descricao"> Coca-cola refrigerante 2 litros </p>
+                            <span class="preco">R$ 12,00</span>
+                            <button class="cta-item js-add-to-cart">Adicionar</button>
+                        </div>
+                    </div>
+
+                    <div class="item" data-name="caldeirada de peixe" data-price="48.00">
+                        <img src="/Img/Pack-6-Coca-Cola-Original-350ml.webp" alt="">
+                        <div class="detalhes">
+                            <h3>Coca-cola latinha</h3>
+                            <p class="descricao"> Coca-cola original 350ml</p>
+                            <span class="preco">R$ 7,00</span>
+                            <button class="cta-item js-add-to-cart">Adicionar</button>
+                        </div>
+                    </div>
+
+                    <div class="item" data-name="Suco de garrafa" data-price="48.00">
+                        <img src="/Img/garrafa-suco.webp" alt="">
+                        <div class="detalhes">
+                            <h3>Suco de garrafa</h3>
+                            <p class="descricao"> Suco de garrafa com sabores de abacaxi, goiaba, acerola, cupuaçu.</p>
+                            <span class="preco">R$ 10,00</span>
+                            <button class="cta-item js-add-to-cart">Adicionar</button>
+                        </div>
+                    </div>
+
+                    
+            </section>
+
+            <section id="sobremesas" class="menu-lista">
+                <h2>Sobremesas</h2>
+                    <div class="item" data-name="Cupuaçu" data-price="48.00">
+                        <img src="/Img/mousse-de-cupuacu.jpg" alt="">
+                        <div class="detalhes">
+                            <h3>Creme de Cupuaçu</h3>
+                            <p class="descricao"> Camarão fresco e arroz soltinho imersos no tucupi, com o toque vibrante do jambu</p>
+                            <span class="preco">R$ 25,00</span>
+                            <button class="cta-item js-add-to-cart">Adicionar</button>
+                        </div>
+                    </div>
+
+                    <div class="item" data-name="Bacuri" data-price="48.00">
+                        <img src="/Img/Creme de Bacuri.jpg" alt="">
+                        <div class="detalhes">
+                            <h3>Bacuri</h3>
+                            <p class="descricao"> Camarão fresco e arroz soltinho imersos no tucupi, com o toque vibrante do jambu</p>
+                            <span class="preco">R$ 25,00</span>
+                            <button class="cta-item js-add-to-cart">Adicionar</button>
+                        </div>
+                    </div>
+
+                    <div class="item" data-name="Torta de Castanha do Pará" data-price="48.00">
+                        <img src="/Img/torta-de-castanha-do-pará.png" alt="">
+                        <div class="detalhes">
+                            <h3>Torta de Castanha do Pará</h3>
+                            <p class="descricao"></p>
+                            <span class="preco">R$ 25,00</span>
+                            <button class="cta-item js-add-to-cart">Adicionar</button>
+                        </div>
+                    </div>
+
+                    <div class="item" data-name="Bolo de Macaxeira" data-price="48.00">
+                        <img src="/Img/Bolo de Macaxeira.png" alt="">
+                        <div class="detalhes">
+                            <h3>Bolo de Macaxeira</h3>
+                            <p class="descricao"> </p>
+                            <span class="preco">R$ 25,00</span>
+                            <button class="cta-item js-add-to-cart">Adicionar</button>
+                        </div>
+                    </div>
+            </section>
+
             
-            <div class="item" data-name="Açaí com Peixe Frito" data-price="55.00">
-                <img src="/Projeto-Front-end/Img/AcaícomPeixeFrito.jpeg" alt="Açaí com Peixe Frito">
-                <div class="detalhes">
-                    <h3>Açaí com Peixe Frito</h3>
-                    <p class="descricao"> Peixe frito e com açaí e farinha com tapioca.</p>
-                    <span class="preco">R$ 35,00</span>
-                    <button class="cta-item js-add-to-cart">Adicionar</button>
-                </div>
-            </div>
+            <section id="pizza" class="menu-lista">
+                <h2>Pizzas</h2>
+                    <div class="item" data-name="Pizza de camarão" data-price="49.00">
+                        <img src="/Img/Pizza de camarão.jpg" alt="">
+                        <div class="detalhes">
+                            <h3>Pizza de camarão</h3>
+                            <p class="descricao"> Camarão fresco e arroz soltinho imersos no tucupi, com o toque vibrante do jambu</p>
+                            <span class="preco">R$ 28,00</span>
+                            <button class="cta-item js-add-to-cart">Adicionar</button>
+                        </div>
+                    </div>
+                    <div class="item" data-name="Pizza de presunto e Mussarela" data-price="48.00">
+                        <img src="/Img/Pizza de Presunto e Mussarela.jpeg" alt="">
+                        <div class="detalhes">
+                            <h3>Pizza de presunto e Mussarela</h3>
+                            <p class="descricao"> Camarão fresco e arroz soltinho imersos no tucupi, com o toque vibrante do jambu</p>
+                            <span class="preco">R$ 25,00</span>
+                            <button class="cta-item js-add-to-cart">Adicionar</button>
+                        </div>
+                    </div>
 
-            <div class="item" data-name="Arroz Paraense" data-price="55.00">
-                <img src="/Projeto-Front-end/Img/ArrozParaense.jpeg" alt="Arroz Paraense">
-                <div class="detalhes">
-                    <h3>Arroz Paraense</h3>
-                    <p class="descricao"> Arroz branco soltinho, camarão e um autêntico molho paraense.</p>
-                    <span class="preco">R$ 30,00</span>
-                    <button class="cta-item js-add-to-cart">Adicionar</button>
-                </div>
-            </div>
+                    <div class="item" data-="" data-price="">
+                     <img src="/Img/Pizza de portuguesa.jpg" alt="">
+                     <div class="detalhes">
+                        <h3>Pizza Portuguesa</h3>
+                            <p class="descricao"> Camarão fresco e arroz soltinho imersos no tucupi, com o toque vibrante do jambu</p>
+                            <span class="preco">R$ 22,00 </span>
+                            <button class="cta-item js-add-to-cart">Adicionar</button>
+                        </div>
+                    </div>
 
-            <div class="item" data-name="Maniçoba Elegante" data-price="48.00">
-                <img src="/Projeto-Front-end/Img/Maniçoba.jpeg" alt="Maniçoba">
-                <div class="detalhes">
-                    <h3>Maniçoba</h3>
-                    <p class="descricao"> Maniva (folha moída da mandioca brava), charque, toucinho, pé, costela e linguiça. O prato é servido tradicionalmente acompanhado por Arroz Branco Soltinh</p>
-                    <span class="preco">R$ 35,00</span>
-                    <button class="cta-item js-add-to-cart">Adicionar</button>
-                </div>
-            </div>
+                    <div class="item" data-="" data-price="">
+                        <img src="/Img/Pizza-Napolitana.jpg" alt="">
+                        <div class="detalhes">
+                            <h3>Pizza de Napolitana</h3>
+                                <p class="descricao"> Camarão fresco e arroz soltinho imersos no tucupi, com o toque vibrante do jambu</p>
+                                <span class="preco">R$ 25,00</span>
+                                <button class="cta-item js-add-to-cart">Adicionar</button>
+                            </div>
+                    </div>
 
-            <div class="item" data-name="Pato no Tucupi" data-price="48.00">
-                <img src="/Projeto-Front-end/Img/PatonoTucupi.jpeg" alt="Pato no Tucupi">
-                <div class="detalhes">
-                    <h3>Pato no Tucupi</h3>
-                    <p class="descricao"> Arroz branco soltinho, camarão e a tradicional goma, realçados pelo autêntico tucupi paraense.</p>
-                    <span class="preco">R$ 50,00</span>
-                    <button class="cta-item js-add-to-cart">Adicionar</button>
-                </div>
-            </div>
+                    <div class="item" data-="" data-price="">
+                        <img src="/Img/Pizza de calabresa.jpg" alt="">
+                        <div class="detalhes">
+                            <h3>Pizza de Calabresa</h3>
+                                <p class="descricao"> </p>
+                                <span class="preco">R$ 27,00</span>
+                                <button class="cta-item js-add-to-cart">Adicionar</button>
+                            </div>
+                    </div>
 
-            <div class="item" data-name="Tacaca" data-price="48.00">
-                <img src="/Projeto-Front-end/Img/Tacaca.jpeg" alt="Tacaca">
-                <div class="detalhes">
-                    <h3>Tacaca</h3>
-                    <p class="descricao"> Camarão fresco e arroz soltinho imersos no tucupi, com o toque vibrante do jambu</p>
-                    <span class="preco">R$ 25,00</span>
-                    <button class="cta-item js-add-to-cart">Adicionar</button>
-                </div>
-            </div>
-            
-        </section>
+                    <div class="item" data-="" data-price="">
+                     <img src="/Img/Pizza de frango com Catupiry.jpg" alt="">
+                     <div class="detalhes">
+                        <h3>Pizza de frango com Catupiry</h3>
+                            <p class="descricao"> Camarão fresco e arroz soltinho imersos no tucupi, com o toque vibrante do jambu</p>
+                            <span class="preco">R$ 25,00</span>
+                            <button class="cta-item js-add-to-cart">Adicionar</button>
+                        </div>
+                    </div>
+            </section>
+        </div>
+
+        <br><br><br>
 
         <section id="sobre" class="info-extra">
             <h2>Nossa História</h2>
-            <p class="paragrafo1">O Encantos Amazonico nasceu da paixão em transformar ingredientes regionais do Pará em experiências gastronômicas elevadas. Cada prato é uma homenagem à cultura e ao sabor inigualável da Amazônia.</p>
+            <p class="paragrafo1">Restaurante Encantos Paraenses nasceu da paixão em transformar ingredientes regionais do Pará em experiências gastronômicas elevadas. Cada prato é uma homenagem à cultura e ao sabor inigualável do Pará.</p>
         </section>
 
         <section id="contato" class="contato">
             <h2>Fale Conosco</h2>
             <div class="contato-container">
                 <div class="contato-info">
-                    <h3>Atendimento Encantos Amazonico</h3>
+                    <h3>Atendimento Encantos Paraenses</h3>
                     <p class="detalhe-contato"><strong>WhatsApp:</strong> (91) 99999-9999</p>
-                    <p class="detalhe-contato"><strong>Email:</strong> Encantos123@email.com.br</p>
+                    <p class="detalhe-contato"><strong>Email:</strong>encantosparaenses123egmail.com.br</p>
                 </div>
                 <form class="contato-form">
                     <input type="text" placeholder="Seu Nome" required>
@@ -107,8 +336,9 @@
     </main>
 
     <footer>
-        <p>© 2025 Restaurante Encantos Amazonicos. Todos os direitos reservados.</p>
+        <p>© 2025 Restaurante Encantos Paraenses. Todos os direitos reservados.</p>
     </footer>
+
 
     <script src="script.js"></script>
 </body>
