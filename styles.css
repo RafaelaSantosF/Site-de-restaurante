@@ -127,7 +127,7 @@ nav a:hover {
     display: inline-block;
     background-color: var(--cor-destaque);
     color: var(--cor-neutra);
-    padding: 18px 40px;
+    padding: 18px 30px;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2em;
@@ -136,22 +136,21 @@ nav a:hover {
 }
 
 .tituloescolha {
-    display: inline-block;
+    display: block;
     background-color: var(--cor-destaque);
     color: var(--cor-neutra);
-    padding: 18px 40px;
-    /* margin-top: 2px; */
-    margin-left: 810px;
-    margin-bottom: 30px;
+    padding: 18px 28px;
+    margin: 0 auto 30px auto;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2em;
-    border-radius: 2000px;
+    border-radius: 8px;
     transition: background-color 0.3s;
+    width: fit-content;
 }
 
 .topicos{
-    padding-left: 655px;
+    padding-left: 528px;
     
 }
 
